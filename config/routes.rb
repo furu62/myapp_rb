@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "posts/index"
   get "users/index" => "users#index"
   post "users/new" => "users#new"
   get "lessons/hello", to: 'lessons#hello'
@@ -16,4 +17,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :users
+  resources :posts
 end
